@@ -1,0 +1,60 @@
+
+html lang ="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validador de CPF</title>
+  <script>
+    function validarCPF(cpf) {
+      // Remover caracteres não numéricos
+      cpf = cpf.replace(/[^\d]+/g, '');
+
+      // Verificar se o CPF tem 11 dígitos
+      if (cpf.length !== 11) {
+        return false;
+      }
+
+      // Verificar se todos os dígitos são iguais (caso do CPF 111.111.111-11, por exemplo)
+      if (/^(\d)\1{10}$/.test(cpf)) {
+        return false;
+      }
+
+      // Função para calcular o dígito verificador
+      function calcularDigito(cpf, peso) {
+        let soma = 0;
+        for (let i = 0; i < peso.length; i++) {
+          soma += parseInt(cpf.charAt(i)) * peso[i];
+        }
+        let resto = soma % 11;
+        return resto < 2 ? 0 : 11 - resto;
+      }
+
+      // Peso para o cálculo dos dígitos verificadores
+      const peso1 = [10, 9, 8, 7, 6, 5, 4, 3, 2];
+      const peso2 = [11, 10, 9, 8, 7, 6, 5, 4, 3, 2];
+
+      // Calcular o primeiro dígito verificador
+      const digito1 = calcularDigito(cpf, peso1);
+      // Calcular o segundo dígito verificador
+      const digito2 = calcularDigito(cpf, peso2);
+
+      // Verificar se os dígitos calculados batem com os informados
+      return cpf.charAt(9) == digito1 && cpf.charAt(10) == digito2;
+    }
+
+    function validarInput() {
+      const cpf = document.getElementById('cpf').value;
+      const resultado = validarCPF(cpf);
+      const mensagem = resultado ? "CPF válido!" : "CPF inválido!";
+      document.getElementById('resultado').innerText = mensagem;
+    }
+  </script>
+</head>
+<body>
+  <h1>Validador de CPF</h1>
+  <label for="cpf">Digite o CPF para validação (apenas números):</label>
+  <input type="text" id="cpf" maxlength="11">
+  <button onclick="validarInput()">Validar</button>
+  <p id="resultado"></p>
+</body>
+</html>
