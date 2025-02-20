@@ -10,12 +10,17 @@ function parouimpar(num) {
   if (num % 2 == 0) {
     return console.log(num, "é par");
   } else {
-    return console.log(num, "é ímpar");
+    return console.log(num, "é ímpar\n");
   }
 }
 
 parouimpar(67);
 
+const imparpar = (num) => {
+  return num % 2 == 0 ? "O número é par veyr!" : "O número é ímpar veyr!";
+};
+console.log(imparpar(13));
+console.log("------------------------------*---------------------------------");
 // 📌 Dica: Use o operador % para verificar o resto da divisão.
 // ------------------------------------------------------------------------
 
@@ -32,7 +37,7 @@ console.log(tabuada, "x 6=", tabuada * 6);
 console.log(tabuada, "x 7=", tabuada * 7);
 console.log(tabuada, "x 8=", tabuada * 8);
 console.log(tabuada, "x 9=", tabuada * 9);
-console.log(tabuada, "x 10=", tabuada * 10, "\n");
+console.log(tabuada, "x 10=", tabuada * 10);
 
 // 📌 Exemplo (se o número for 3):
 // 3 x 1 = 3
@@ -43,13 +48,17 @@ console.log(tabuada, "x 10=", tabuada * 10, "\n");
 
 // 3. Fatorial de um Número
 // Solicite um número ao usuário e exiba no console o seu fatorial.
+console.log("------------------------------*---------------------------------");
 console.log("Fatorial de 5 =", 5 * 4 * 3 * 2 * 1);
 // 📌 Fatorial de 5: 5! = 5 × 4 × 3 × 2 × 1 = 120
 // ------------------------------------------------------------------------
 
 // 4. Soma dos Números de um Array
 // Crie um programa que tenha um array com números aleatórios e exiba no console a soma total desses números.
-
+var numeros = [10, 20, 30, 40];
+var soma = numeros[0] + numeros[1] + numeros[2] + numeros[3];
+console.log("------------------------------*---------------------------------");
+console.log(soma);
 // 📌 Exemplo:
 // let numeros = [10, 20, 30, 40];
 // // Saída: Soma = 100
@@ -57,6 +66,7 @@ console.log("Fatorial de 5 =", 5 * 4 * 3 * 2 * 1);
 
 // 5. Ordenação de Números
 // Peça ao usuário para inserir vários números separados por vírgula. Depois, exiba os números ordenados de forma crescente no console.
+console.log("------------------------------*---------------------------------");
 var numeros = [2, 6, 1, 5, 4, 8];
 
 numeros.sort();
