@@ -9,3 +9,4 @@ for (let linha = 0; linha < matriz.length; linha++) {
     if (coluna == linha)
     console.log(matriz[linha][coluna]);
 }
+//kisses from caittin
