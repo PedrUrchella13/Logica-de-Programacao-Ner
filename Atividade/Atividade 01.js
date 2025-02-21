@@ -62,3 +62,4 @@ console.log("Seu saldo é de:",saldo)
 // console.log("Cliente:", nome);
 // console.log("Agência:", agencia, "| Conta:", conta);
 // console.log("Seu saldo é de R$", saldo);
+привет
