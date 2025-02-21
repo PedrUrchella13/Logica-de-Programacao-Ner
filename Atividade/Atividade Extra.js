@@ -76,3 +76,41 @@ console.table(numeros);
 // Entrada: 8, 3, 5, 1, 9
 // Saída: 1, 3, 5, 8, 9
 // ------------------------------------------------------------------------
+var gasto = 0;
+var nome = prompt("Qual seu nome fofo?");
+var banco = prompt("Pra qual banco você vendeu sua alma?");
+var agencia = prompt("Em qual agência?");
+var numeroConta = prompt("Qual o número da sua conta?");
+var saldo = prompt(`Informe seu saldo (Não valer mentir em bi!).`);
+
+console.log(
+  `Olá ${nome}, você é cliente do ${banco} e se cadastrou na agência ${agencia}. Sua conta é a de número ${numeroConta}, e você tem atualmente ${saldo} reais!`
+);
+
+var x = 1;
+while (x <= 5) {
+  gasto += Math.random()*1000; //Valor aleatório entre 0 e 99.999999...
+ // saldo -= gasto.toFixed(2);
+  x++;
+}
+//console.log(saldo.toFixed(2)); // Conserta um valor decimal somente com duas (2) casas
+
+var limite = 4600
+if (gasto > limite) {
+  console.log("Parece que você estourou seu cartão para a Lua! Contate um dos nossos agentes para pagar sua dívida.");
+} else {
+  console.log("Obrigado por usar nosso sistema!")
+};
+
+// Cara ou coroa - melhor de três rodadas - aleatório - DO WHILE
+
+var cara = 1;
+var coroa = 2;
+var contador = 0;
+
+do {
+  let vitória = Math.random(1,2)
+} while (contador > 3);
+  
+
+console.log(aa);)
