@@ -10,7 +10,6 @@ console.log("A soma entre as variáveis é", varNum1 + varNum2 + varNum3);
 console.log("A soma entre as variáveis é", varNum1 - varNum2 - varNum3);
 console.log("A soma entre as variáveis é", varNum1 * varNum2 * varNum3);
 console.log("A soma entre as variáveis é", varNum1 / varNum2 / varNum3);
-console.log(`|----------------***---------------|`);
 // 2. Crie três variáveis representando as notas de um aluno e calcule sua
 // média. Se a média for maior ou igual a 7, exiba "Aprovado", senão,
 // "Reprovado".
@@ -67,6 +66,7 @@ console.log(
 // 2. Estruturas Condicionais (IF, ELSE)
 // 6. Dado um número qualquer, exiba se ele é múltiplo de 3, múltiplo de 5 ou
 // múltiplo de ambos.
+var numero = 1;
 // 7. Determine se um ano específico (exemplo: 2024) é bissexto (divisível por 4
 // e não por 100, exceto se for divisível por 400).
 // 8. Dado um número de 0 a 6, exiba o dia da semana correspondente (0 =
@@ -81,6 +81,10 @@ console.log(
 // o Acima de R$100,00: 10% de desconto.
 // 3. Laços de Repetição (FOR, WHILE)
 // 11. Exiba todos os números pares entre 1 e 50.
+console.log(`|----------------***---------------|`);
+for (let i = 0; i < 50; i += 2) {
+  console.log("Números pares de 0 até 100:", i);
+}
 // 12. Exiba a tabuada do número 9 (de 9 × 1 até 9 × 10).
 // 13. Some os números de 1 a 100 e exiba o resultado.
 // 14.Dado um array [3, 5, 7, 9, 11], exiba a soma de seus elementos.
