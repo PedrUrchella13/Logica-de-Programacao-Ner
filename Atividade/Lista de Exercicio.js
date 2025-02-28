@@ -49,17 +49,17 @@ console.log(
 // o 5% para compras de 2 unidades;
 console.log(`|----------------***---------------|`);
 console.log(
-  "Você comprou 2 celulares por R$ 3.000 reais, logo recebeu um disconto de ",
+  "Você comprou 2 celulares por R$ 3.000 reais, logo recebeu um disconto de",
   1500 * 2 * 0.05
 );
 // o 10% para compras de 3 unidades;
 console.log(
-  "Você comprou 3 celulares por R$ 4.500 reais, logo recebeu um disconto de ",
+  "Você comprou 3 celulares por R$ 4.500 reais, logo recebeu um disconto de",
   1500 * 3 * 0.1
 );
 // o 15% para compras de 4 ou mais unidades. Exiba o valor final a pagar
 console.log(
-  "Você comprou 4 celulares por R$ 6.000 reais, logo recebeu um disconto de ",
+  "Você comprou 4 celulares por R$ 6.000 reais, logo recebeu um disconto de",
   1500 * 4 * 0.15
 );
 // para cada quantidade.
@@ -83,20 +83,54 @@ if (numero % 5 == 0 && 5) {
 
 // 7. Determine se um ano específico (exemplo: 2024) é bissexto (divisível por 4
 // e não por 100, exceto se for divisível por 400).
+var ano = 4;
+
+if (ano % 400 == 0) {
+  console.log("O ano é bissexto");
+} else {
+  console.log(`O ano não é bissexto`);
+}
 // 8. Dado um número de 0 a 6, exiba o dia da semana correspondente (0 =
 // Domingo, 1 = Segunda...).
+
 // 9. Se um motorista ultrapassar um limite de velocidade de 80km/h, ele será
 // multado. Para cada km acima do limite, a multa custa R$5,00. Determine o
 // valor da multa para um carro a 95km/h.
+console.log(`|----------------***---------------|`);
+var kilometragem = 95;
+var limite = 80;
+
+if (kilometragem > limite) {
+  console.log(`Você foi multado em ${(kilometragem-limite) * 5}`);
+} else {
+  console.log(`Não tem multa`);
+}
+
 // 10.Crie um programa que, dado o preço de um produto, aplique um desconto
 // conforme a seguinte tabela:
+
 // o Menos de R$50,00: sem desconto.
+
 // o Entre R$50,00 e R$100,00: 5% de desconto.
+
 // o Acima de R$100,00: 10% de desconto.
+console.log(`|----------------***---------------|`);
+var produto = 59;
+var semDisconto = 0;
+var peqDisconto = 50;
+var grdDisconto = 100;
+
+if (produto >= 100) {
+  console.log(`Disconto de ${produto * 0.10}`);
+} else if (produto > peqDisconto && produto < grdDisconto) {
+  console.log(`Disconto de ${produto * 0.05}`);
+} else {
+  console.log(`Sem desconto`);
+}
 // 3. Laços de Repetição (FOR, WHILE)
 // 11. Exiba todos os números pares entre 1 e 50.
 console.log(`|----------------***---------------|`);
-for (let i = 0; i < 50; i += 2) {
+for (let i = 0; i <= 50; i += 2) {
   console.log("Números pares de 0 até 100:", i);
 }
 // 12. Exiba a tabuada do número 9 (de 9 × 1 até 9 × 10).
