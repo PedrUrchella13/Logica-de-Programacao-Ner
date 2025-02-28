@@ -39,7 +39,7 @@ console.log(`|----------------***---------------|`);
 Math.PI;
 var raio = 7;
 console.log(
-  "Comprimento de uma circunferencia de raio =",
+  "A área de uma circunferencia de raio =",
   raio,
   "cm:",
   Math.PI * raio ** 2
@@ -66,7 +66,21 @@ console.log(
 // 2. Estruturas Condicionais (IF, ELSE)
 // 6. Dado um número qualquer, exiba se ele é múltiplo de 3, múltiplo de 5 ou
 // múltiplo de ambos.
-var numero = 1;
+console.log(`|----------------***---------------|`);
+var numero = 30;
+
+if (numero % 3 == 0) {
+  console.log(`O número é múltiplo de 3`);
+} else {
+  console.log(`O número não é múltiplo de 3`);
+}
+
+if (numero % 5 == 0 && 5) {
+  console.log(`o número é múltiplo de 5`);
+} else {
+  console.log(`O número não é multiplo de 5`);
+}
+
 // 7. Determine se um ano específico (exemplo: 2024) é bissexto (divisível por 4
 // e não por 100, exceto se for divisível por 400).
 // 8. Dado um número de 0 a 6, exiba o dia da semana correspondente (0 =
